@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>寒潮求生 - Climate Care Survival</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 补充一些基础布局，防止 CSS 文件未加载时崩溃 */
+        #game-container { position: relative; max-width: 600px; margin: 0 auto; overflow: hidden; }
+        .hidden { display: none !important; }
+        .item-icon { width: 60px; height: 60px; border: 1px solid #ccc; display: inline-block; cursor: pointer; margin: 5px; }
+        .item-icon img { width: 100%; height: 100%; object-fit: contain; }
+        .outfit-slot { width: 70px; height: 70px; border: 2px dashed #999; display: flex; align-items: center; justify-content: center; background: #eee; }
+        .next-btn, .choice-btn, .confirm-btn { padding: 10px 20px; cursor: pointer; margin: 5px; }
+    </style>
+</head>
+<body>
+
+<div id="game-container">
+    <div id="start-screen">
+        <img src="assets/title.png" id="game-logo" style="width: 60%;" alt="寒潮求生">
+        <button id="start-btn">开启寒潮求生</button>
+    </div>
+
+    <div id="background-layer"></div>
+    
+    <div id="character-layer">
+        <img id="main-character" src="assets/figure/old_initial.png">
+    </div>
+
+    <div id="ui-overlay">
+        <div id="stats-panel">
+            <span id="day-indicator">第 0 天</span> | 
+            <span>生命: <b id="health">10</b></span> | 
+            <span>心情: <b id="mood">10</b></span> | 
+            <span>退休金: <b id="pension">1000</b></span>
+        </div>
+        
+        <div id="main-layout">
+            <div id="stage-area">
+                <div id="background-layer"></div>
+            </div>
+    
+            <div id="character-sidebar">
+                <div class="character-box">
+                    <img id="avatar-display" src="assets/figure/old_initial.png">
+                </div>
+                <div class="character-label">当前状态</div>
+            </div>
+        </div>
+
+        <div id="weather-display">
+            <div class="weather-item">温度🌡️： <span id="temp-val"> </span> 摄氏度</div>
+            <div class="weather-item">风力🌬️： <span id="wind-val"> </span> 级</div>
+            <div class="weather-tag" id="weather-alert">正常</div>
+        </div>
+
+        <div id="dialog-box">
+            <div id="dialog-text">【事先准备】寒潮将至，你有一笔 1000 元的退休金...</div>
+            <div id="choices-container"></div>
+        </div>
+    </div>
+</div>
+
+    <div id="wardrobe-overlay" class="hidden" style="position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.8); color:#fff; padding: 20px; z-index: 100;">
+        <div class="wardrobe-window">
+            <h3>换装面板</h3>
+            <p>点击下方图标穿戴部件</p>
+            
+            <div class="current-outfit-preview" style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+                <div class="outfit-slot" id="slot-head"><span>头</span></div>
+                <div class="outfit-slot" id="slot-torso"><span>身</span></div>
+                <div class="outfit-slot" id="slot-legs"><span>腿</span></div>
+                <div class="outfit-slot" id="slot-feet"><span>足</span></div>
+                <div class="outfit-slot" id="slot-acc1"><span>件</span></div>
+            </div>
+    
+            <hr>
+    
+            <div id="item-grid" class="item-grid" style="max-height: 200px; overflow-y: auto; background: rgba(255,255,255,0.1); padding: 10px;">
+                </div>
+    
+            <button class="confirm-btn" onclick="UI.closeWardrobe()" style="width: 100%; margin-top: 20px; background: #4caf50; color: #fff;">整理完毕 (换好了)</button>
+        </div>
+    </div>
+
+</div>
+
+<script src="Main.js"></script>
+
+<script>
+/**
+ * 启动逻辑绑定
+ * 确保 Main.js 加载后，点击按钮触发游戏启动
+ */
+document.addEventListener("DOMContentLoaded", () => {
+    const startBtn = document.getElementById("start-btn");
+    
+    // 初始状态下对话框显示欢迎语
+    UI.updateDialog("欢迎来到申城严冬。准备好迎接第一波寒潮了吗？");
+
+    startBtn.addEventListener("click", () => {
+        if (window.Game) {
+            Game.startGame();
+        } else {
+            console.error("Game 引擎尚未加载完成");
+        }
+    });
+});
+</script>
+
+</body>
+</html>
