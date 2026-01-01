@@ -52,12 +52,19 @@ A strategy simulation web game inspired by real cold waves and the challenges of
 
 ### Event & Market Scene | 事件 & 菜市场场景
 ![Demo](readme/event.png) 
-![Demo](readme/market_flower_bird.png)
+<p align="center">
+  <img src="readme/market_flower_bird.png">
+</p>
 
 ### CG Placeholder | CG 占位
 <p align="center">
   <img src="readme/old_cold.png" height="260" style="margin-right:16px;">
-  <img src="readme/granddaughter.png" height="260">
+  <img src="readme/granddaughter.png" height="260" style="margin-right:16px;">
+  <img src="readme/nurse_initial.png" height="260">
+</p>
+
+<p align="center">
+  <img src="readme/ending_normal.png">
 </p>
 
 > Future updates will include dynamic sprites and CG based on player attributes.  
