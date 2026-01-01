@@ -1,9 +1,11 @@
-# 🌨️ Climate Care Survival | 寒潮余生
+# 🌨️ Climate Care Survival | 寒潮求生
 
 > 帮助老李在寒潮中安全度过，每一件选择都关系到生命、心情与财富。  
 > Help Old Li survive the cold wave—every choice affects his health, mood, and pension.
 
-![游戏封面 / Cover](assets/title.png)
+<p align="center">
+  <img src="assets/title.png" alt="Climate Care Survival Cover" width="600">
+</p>
 
 ---
 
@@ -45,13 +47,18 @@ A strategy simulation web game inspired by real cold waves and the challenges of
 ## 📸 Screenshots & Demo | 截图与演示
 
 ### Daily UI & Wardrobe | 日常界面 & 换衣系统
-![UI Screenshot](assets/ui-screenshot.png)
+![UI Screenshot](readme/screenshot_1.png)
+![UI Screenshot](readme/screenshot_2.png)
 
 ### Event & Market Scene | 事件 & 菜市场场景
-![Market Demo](assets/market-scene.png)
+![Demo](readme/event.png) 
+![Demo](readme/market_flower_bird.png)
 
 ### CG Placeholder | CG 占位
-![CG Placeholder](assets/cg-placeholder.png)
+<p align="center">
+  <img src="readme/old_cold.png" height="260" style="margin-right:16px;">
+  <img src="readme/granddaughter.png" height="260">
+</p>
 
 > Future updates will include dynamic sprites and CG based on player attributes.  
 > 后续更新将根据玩家属性呈现动态立绘与 CG
