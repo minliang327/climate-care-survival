@@ -7,7 +7,9 @@
   <img src="assets/title.png" alt="Climate Care Survival Cover" width="600">
 </p>
 
----
+🎮 Gameplay Preview
+> [▶ Demo Video](readme/demo.mp4)</p>
+> ▶ Full demo (1 min): https://youtu.be/Zr5U1hbUkxg?si=jyJu4CAlRmdUEE2P
 
 ## 🎮 About the Project | 关于项目
 
