@@ -8,8 +8,8 @@
 </p>
 
 🎮 Gameplay Preview
-> [▶ Watch the Demo Video]https://github.com/minliang327/climate-care-survival/issues/1#issue-3774304012</p>
-> ▶ Full demo (1 min): https://youtu.be/Zr5U1hbUkxg?si=jyJu4CAlRmdUEE2P
+> ▶ Watch the Demo Video: https://github.com/minliang327/climate-care-survival/issues/1#issue-3774304012</p>
+> ▶ Watch the Full Demo: https://youtu.be/Zr5U1hbUkxg?si=jyJu4CAlRmdUEE2P
 
 ## 🎮 About the Project | 关于项目
 
